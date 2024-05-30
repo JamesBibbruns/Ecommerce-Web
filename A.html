@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            height: 100%;
+        }
+        *{
+            box-sizing: border-box;
+        }
+        header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 50px;
+            background-color:white;
+        }
+        header img{
+            width: 100px;
+        }
+        .search-container{
+            display: flex;
+            align-items: center;
+            border-radius: 5px;
+        }
+        .search-container input{
+            padding: 10px;
+            border: 1px solid grey;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+        .search-container a{
+            color: #0f6b10;
+            text-decoration: none;
+        }
+        .search-container .search-icon{
+            width: 20px;
+            margin-right: 10px;
+        }
+        .search-container .login-link{
+            margin-right: 10px;
+        }
+        .search-container .login-icon{
+            width: 30px;
+            margin-right: 10px;
+            
+        }
+        .search-container .shopping-cart-link{
+            margin-right: 10px;
+            
+        }
+        .search-container .shopping-cart-icon{
+            width: 30px;
+        }
+
+
+        /* navigation bar */
+        nav {
+        background-color: #333;
+        overflow: hidden;
+        display: flex;
+        }
+
+        nav h2 {
+            color: white;
+            padding: 14px 16px;
+            font-size: 20px;
+            text-align: left;
+            display: flex;
+            float: left;
+            margin-left: 10%;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            margin-top: 1%;
+            margin-left: 20%
+
+        }
+
+        nav ul li {
+            float: left;
+        }
+
+        nav ul li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            margin-left: 50px;
+        }
+
+        nav ul li a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .banner{
+        height: 1300px;   /* 容器高度为75% */
+        width: 90%;   /* 容器宽度为100% */
+        position: relative; /* 根据需要调整位置 */
+        overflow: hidden; /* 防止内容溢出 */
+        background-image: url(https://i5.walmartimages.com/asr/5cc6d3f5-2e50-4ec9-aa1c-3f8920a97b06.acab7e999a47d96d0032c281d6f55926.jpeg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin: 5%;
+        }
+        span{
+            color: gold;
+            position: absolute;
+            top: 13%;
+        }
+        .banner h1{
+            position: absolute;
+            top: 6%;
+            right: 10%;
+            font-size: 50px;
+            width: 500px;
+        }
+        .rating h2{
+            font-weight: 300;
+            position: absolute;
+            top: 5%;
+            background-color: aquamarine;
+        }
+
+
+        .sale-banner {
+    background-color: #fff;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+}
+
+.sale-banner h1 {
+    margin-top: 0;
+}
+
+.discount {
+    margin: 20px 0;
+}
+
+.prices {
+    display: flex;
+    justify-content: center;
+}
+
+.original-price {
+    text-decoration: line-through;
+}
+
+.sale-price {
+    color: red;
+    margin-left: 10px;
+}
+
+button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+.guarantee {
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
+    background-color: #e9ecef;
+}
+
+.payment-methods {
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.methods {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.methods img {
+    width: 50px; /* Adjust size as needed */
+    margin: 0 10px;
+}
+
+@media (max-width: 768px) {
+    .prices {
+        flex-direction: column;
+    }
+
+    .sale-banner, .guarantee, .payment-methods {
+        margin: 10px;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+.shop-container {
+    width: 30%;
+    height: 50%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 60%;
+    left: 75%;
+    transform: translate(-50%, -50%)
+}
+    </style>
+</head>
+<body>
+    <div>
+        <header>
+            <img src="https://tse4-mm.cn.bing.net/th/id/OIP-C.yjtpsfM30wjRHfkl6eh2WQHaGK?rs=1&pid=ImgDetMain" alt="">
+            <div class="search-container">
+                <input type="text" id="search" placeholder="Search...">
+                <a href=""><img src="https://static.vecteezy.com/system/resources/previews/015/337/677/non_2x/transparent-search-icon-free-png.png" alt="search-icon" class="search-icon"></a>
+                <a href="login.html" class="login-link">login</a>
+                <a href=""><img src="https://tse1-mm.cn.bing.net/th/id/OIP-C.rcgY01LTCMJTv42lgWJpigHaHw?rs=1&pid=ImgDetMain" alt="" class="login-icon"></a>
+                <a href="shopping.html" class="shopping-cart-link">shopping cart</a>
+                <a href=""><img src="https://tse4-mm.cn.bing.net/th/id/OIP-C.p1o2X-riVdu34OQilWHcTQHaHa?rs=1&pid=ImgDetMain" alt="" class="shopping-cart-icon"></a>
+            </div>
+        </header>
+        <nav>
+            <h2>JD Commerce</h2>
+            <ul>
+                <li><a href="index.html">Homepage</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact and support</a></li>
+                <li><a href="shopping.html">Shopping</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </nav>
+    </div>
+    <section class="banner">
+        <h1>Discover the Power of Versatility with Our Removable Handle Set</h1>
+        <div class="rating">
+            <h2>100k+ orders</h2>
+            <span>★★★★★ 5.0</span>
+        </div>
+        <div class="shop-container">
+            <div class="sale-banner">
+                <!-- <h1>Hurry - Our Induction-Compatible Kitchenware Set is Selling Out Fast.</h1> -->
+                <p>Order Now to Upgrade Your Cooking Game!</p>
+                <div class="discount">
+                    <p>50% OFF</p>
+                    <div class="prices">
+                        <p class="original-price">$79.98</p>
+                        <p class="sale-price">$49.99</p>
+                    </div>
+                </div>
+                <p>42 Items in stock</p>
+                <button type="button">SHOP NOW</button>
+            </div>
+            <div class="guarantee">
+                <p>100% No-Risk Money Back Guarantee</p>
+            </div>
+            <div class="payment-methods">
+                <p>Accepted Payment Methods:</p>
+                <div class="methods">
+                    <img src="https://iconape.com/wp-content/uploads/1/12/Apple-Pay-Logo-0٤.png" alt="Apple Pay">>
+                    <img src="https://logos-world.net/wp-content/uploads/2020/04/Visa-Symbol.png" alt="VISA">
+                </div>
+                <p>Buy now to receive in 10 Feb - 16 Feb 23</p>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
